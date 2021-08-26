@@ -83,7 +83,10 @@
   border-top: black 1px solid;
 }
 
-.card-name-container, .card-image-container, .card-description-container, .card-star {
+.card-name-container,
+.card-image-container,
+.card-description-container,
+.card-star {
   filter: drop-shadow(1px 1px 1px);
 }
 
@@ -97,7 +100,8 @@
 .card-star {
   width: 20px;
   height: 20px;
-  background-color: #E64C28;
+  background-image: url("./image/star.png");
+  background-size: contain;
   border-radius: 50%;
   display: inline-block;
   margin-top: 3px;
