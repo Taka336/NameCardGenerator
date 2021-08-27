@@ -55,7 +55,7 @@
 .card-image-inner-container {
   width: 260px;
   height: 260px;
-  background-image: url("./image/001.jpg");
+  background-image: url("../image/001.jpg");
   background-size: contain;
   position: absolute;
   top: 6px;
@@ -135,7 +135,7 @@
 .card-star {
   width: 20px;
   height: 20px;
-  background-image: url("./image/star.png");
+  background-image: url("../image/star.png");
   background-size: contain;
   border-radius: 50%;
   display: inline-block;
