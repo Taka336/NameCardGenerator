@@ -1,14 +1,14 @@
 .card-container {
   width: 340px;
   height: 500px;
-  background-color: #1C2534;
+  background-color: #1c2534;
   position: relative;
 }
 
 .card-inner-container {
   width: 320px;
   height: 480px;
-  background-color: #BCA674;
+  background-color: #bca674;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -17,10 +17,21 @@
 .card-name-container {
   width: 300px;
   height: 38px;
-  background-color: #BB995A;
+  background-color: #bb995a;
   position: absolute;
   top: 10px;
   left: 10px;
+}
+
+.card-attribute-container {
+  width: 35px;
+  height: 35px;
+  background-color: #5c3b70;
+  border-radius: 50%;
+  position: absolute;
+  top: 1.5px;
+  left: 260px;
+  text-align: center;
 }
 
 .card-level-container {
@@ -51,10 +62,19 @@
   left: 6px;
 }
 
+.card-number-container {
+  width: 272px;
+  height: 12px;
+  position: absolute;
+  top: 346px;
+  left: 24px;
+  text-align: right;
+}
+
 .card-description-container {
   width: 305px;
   height: 105px;
-  background-color: #A48050;
+  background-color: #a48050;
   position: absolute;
   top: 360px;
   left: 7.5px;
@@ -63,7 +83,7 @@
 .card-description-inner-container {
   width: 295px;
   height: 95px;
-  background-color: #F7EFDC;
+  background-color: #f7efdc;
   position: absolute;
   top: 5px;
   left: 5px;
@@ -83,6 +103,16 @@
   border-top: black 1px solid;
 }
 
+.card-bottom-text-container {
+  width: 310px;
+  height: 12px;
+  position: absolute;
+  top: 465px;
+  left: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .card-name-container,
 .card-image-container,
 .card-description-container,
@@ -97,6 +127,11 @@
   left: 10px;
 }
 
+.card-attribute {
+  font-size: 23px;
+  color: #fff;
+}
+
 .card-star {
   width: 20px;
   height: 20px;
@@ -107,7 +142,11 @@
   margin-top: 3px;
 }
 
-.card-attribute {
+.card-number {
+  font-size: 10px;
+}
+
+.card-category {
   font-size: 10px;
 }
 
@@ -121,4 +160,10 @@
   font-size: 12px;
   font-weight: bold;
   text-align: right;
+}
+
+.card-date,
+.card-author {
+  display: inline-block;
+  font-size: 10px;
 }
