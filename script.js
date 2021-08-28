@@ -1,6 +1,8 @@
+const cardContainer = document.getElementById("card-container");
 const cardName = document.getElementById("card-name");
 const cardAttribute = document.getElementById("card-attribute");
 const cardLevelContainer = document.getElementById("card-level-container");
+const cardImage = document.getElementById("card-image");
 const cardCategory = document.getElementById("card-category");
 const cardText = document.getElementById("card-text");
 const cardStatus = document.getElementById("card-status");
@@ -12,6 +14,7 @@ const accountId = document.getElementById("account-id");
 const cardNameInput = document.getElementById("card-name-input");
 const cardAttributeInput = document.getElementById("card-attribute-input");
 const cardLevelInput = document.getElementById("card-level-input");
+const cardImageInput = document.getElementById("card-image-input");
 const cardCategoryInput = document.getElementById("card-category-input");
 const cardTextInput = document.getElementById("card-text-input");
 const accountTypeInput = document.getElementById("account-type-input");
@@ -68,6 +71,24 @@ cardLevelInput.addEventListener("change", function () {
 
   const [attackStatus, defenseStatus] = getStatus();
   cardStatus.innerText = `ATK/${attackStatus}　DEF/${defenseStatus}`;
+});
+
+cardImageInput.addEventListener("change", function () {
+  const file = document.getElementById("card-image-input").files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener(
+    "load",
+    function () {
+      // convert image file to base64 string
+      cardImage.src = reader.result;
+    },
+    false
+  );
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
 });
 
 cardCategoryInput.addEventListener("change", function () {
