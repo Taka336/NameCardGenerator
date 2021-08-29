@@ -106,3 +106,13 @@ accountTypeInput.addEventListener("change", function () {
 accountIdInput.addEventListener("input", function () {
   accountId.innerText = this.value;
 });
+
+const btn = document.getElementById("download-btn");
+btn.addEventListener("click", () => {
+  html2canvas(cardContainer).then((canvas) => {
+    let downloadEle = document.createElement("a");
+    downloadEle.href = canvas.toDataURL("image/png");
+    downloadEle.download = "canvas.png";
+    downloadEle.click();
+  });
+});
