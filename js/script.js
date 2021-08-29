@@ -3,6 +3,7 @@ const cardName = document.getElementById("card-name");
 const cardAttribute = document.getElementById("card-attribute");
 const cardLevelContainer = document.getElementById("card-level-container");
 const cardImage = document.getElementById("card-image");
+const cardNumber = document.getElementById("card-number");
 const cardCategory = document.getElementById("card-category");
 const cardText = document.getElementById("card-text");
 const cardStatus = document.getElementById("card-status");
@@ -53,7 +54,19 @@ function getStatus() {
   return [attackStatus * 100, defenseStatus * 100];
 }
 
+function getCardNumber() {
+  const dt = new Date();
+  const hour = dt.getHours();
+  const minute = dt.getMinutes();
+  const dayNum = dt.getDay();
+  const day = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"][dayNum];
+  const cardNumber = `${day}-${hour}${minute}`;
+  return cardNumber;
+}
+
 cardDate.innerText = getToday();
+
+cardNumber.innerText = getCardNumber();
 
 cardNameInput.addEventListener("input", function () {
   cardName.innerText = this.value;
