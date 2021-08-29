@@ -75,7 +75,7 @@ cardLevelInput.addEventListener("change", function () {
 });
 
 cardImageInput.addEventListener("change", function () {
-  const file = document.getElementById("card-image-input").files[0];
+  const file = this.files[0];
   const reader = new FileReader();
 
   reader.addEventListener(
