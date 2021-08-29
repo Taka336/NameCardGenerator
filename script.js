@@ -108,11 +108,10 @@ accountIdInput.addEventListener("input", function () {
 });
 
 const btn = document.getElementById("download-btn");
-btn.addEventListener("click", () => {
-  html2canvas(cardContainer).then((canvas) => {
-    let downloadEle = document.createElement("a");
-    downloadEle.href = canvas.toDataURL("image/png");
-    downloadEle.download = "canvas.png";
-    downloadEle.click();
-  });
+btn.addEventListener("click", async () => {
+  const canvas = await html2canvas(cardContainer);
+  let downloadEle = document.createElement("a");
+  downloadEle.href = canvas.toDataURL("image/png");
+  downloadEle.download = "canvas.png";
+  downloadEle.click();
 });
