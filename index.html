@@ -6,128 +6,146 @@
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
   </head>
   <body>
-    <div class="card-container" id="card-container">
-      <div class="card-inner-container">
-        <div class="card-name-container">
-          <div class="card-name" id="card-name">ほげほげ</div>
-          <div class="card-attribute-container">
-            <div class="card-attribute" id="card-attribute">鯖</div>
-          </div>
-        </div>
-
-        <div class="card-level-container" id="card-level-container">
-          <div class="card-star"></div>
-        </div>
-
-        <div class="card-image-container">
-          <div class="card-image-inner-container">
-            <img src="image/001.jpg" class="card-image" id="card-image" />
-          </div>
-        </div>
-
-        <div class="card-number-container">
-          <div class="card-number">FEZ-001</div>
-        </div>
-
-        <div class="card-description-container">
-          <div class="card-description-inner-container">
-            <div class="card-category-container">
-              <div class="card-category">
-                【<span id="card-category">JavaScript</span>族／通常】
+    <div class="header-container"></div>
+    <div class="main-container">
+      <div class="preview-container">
+        <div class="card-container" id="card-container">
+          <div class="card-inner-container">
+            <div class="card-name-container">
+              <div class="card-name" id="card-name">ほげほげ</div>
+              <div class="card-attribute-container">
+                <div class="card-attribute" id="card-attribute">鯖</div>
               </div>
             </div>
-            <div class="card-text-container">
-              <div class="card-text" id="card-text">
-                何を考えているのかさっぱりわからない新人のエンジニア。たまに怒ると怖い。
+
+            <div class="card-level-container" id="card-level-container">
+              <div class="card-star"></div>
+            </div>
+
+            <div class="card-image-container">
+              <div class="card-image-inner-container">
+                <img src="image/001.jpg" class="card-image" id="card-image" />
               </div>
             </div>
-            <div class="card-status-container">
-              <div class="card-status" id="card-status">ATK/300　DEF/100</div>
+
+            <div class="card-number-container">
+              <div class="card-number">FEZ-001</div>
+            </div>
+
+            <div class="card-description-container">
+              <div class="card-description-inner-container">
+                <div class="card-category-container">
+                  <div class="card-category">
+                    【<span id="card-category">JavaScript</span>族／通常】
+                  </div>
+                </div>
+                <div class="card-text-container">
+                  <div class="card-text" id="card-text">
+                    何を考えているのかさっぱりわからない新人のエンジニア。たまに怒ると怖い。
+                  </div>
+                </div>
+                <div class="card-status-container">
+                  <div class="card-status" id="card-status">
+                    ATK/300　DEF/100
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-bottom-text-container">
+              <div class="card-date" id="card-date"></div>
+              <div class="card-author" id="card-author">
+                <span id="account-type">GitHub</span>: @<span id="account-id"
+                  >HogeHoge</span
+                >
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="card-bottom-text-container">
-          <div class="card-date" id="card-date"></div>
-          <div class="card-author" id="card-author">
-            <span id="account-type">GitHub</span>: @<span id="account-id"
-              >HogeHoge</span
-            >
+      <div class="inputs-container">
+        <div class="inputs-inner-container">
+          <div class="item-name">カード名</div>
+          <div class="card-name-input-container">
+            <input type="text" id="card-name-input" placeholder="ほげほげ" />
+          </div>
+
+          <div class="item-name">属性（業務領域）</div>
+          <div class="card-attribute-input-container">
+            <select name="card-attribute" id="card-attribute-input" required>
+              <option value="鯖" selected>サーバーサイドエンジニア</option>
+              <option value="前">フロントエンドエンジニア</option>
+              <option value="網">ネットワークエンジニア</option>
+              <option value="基">インフラエンジニア</option>
+              <option value="全">フルスタックエンジニア</option>
+            </select>
+          </div>
+
+          <div class="item-name">レベル（エンジニア歴）</div>
+          <div class="card-level-input-container">
+            <select name="card-level" id="card-level-input" required>
+              <option value="1" selected>1年未満</option>
+              <option value="2">1年以上3年未満</option>
+              <option value="3">3年以上5年未満</option>
+              <option value="4">5年以上10年未満</option>
+              <option value="5">10年以上20年未満</option>
+              <option value="6">20年以上30年未満</option>
+              <option value="7">30年以上40年未満</option>
+              <option value="8">40年以上</option>
+            </select>
+          </div>
+
+          <div class="item-name">画像</div>
+          <div class="card-image-input-container">
+            <input
+              type="file"
+              name="card-image"
+              accept=".png, .jpg, .jpeg"
+              id="card-image-input"
+            />
+          </div>
+
+          <div class="item-name">種族（メイン言語）</div>
+          <div class="card-category-input-container">
+            <select name="card-level" id="card-category-input" required>
+              <option value="JavaScript" selected>JavaScript</option>
+              <option value="C++">C++</option>
+              <option value="Python">Python</option>
+              <option value="Java">Java</option>
+              <option value="Go">Go</option>
+            </select>
+          </div>
+
+          <div class="item-name">カードテキスト（自己紹介）</div>
+          <div class="card-text-input-container">
+            <input
+              type="text"
+              id="card-text-input"
+              placeholder="何を考えているのかさっぱりわからない新人のエンジニア。たまに怒ると怖い。"
+            />
+          </div>
+
+          <div class="item-name">ソーシャルアカウント</div>
+          <div class="account-type-input-container">
+            <select name="account-id" id="account-type-input" required>
+              <option value="GitHub" selected>GitHub</option>
+              <option value="Twitter">Twitter</option>
+            </select>
+          </div>
+
+          <div class="item-name">ソーシャルアカウントID</div>
+          <div class="account-id-input-container">
+            <input type="text" id="account-id-input" placeholder="HogeHoge" />
+          </div>
+
+          <div class="download-btn-container">
+            <input id="download-btn" type="button" value="download image" />
           </div>
         </div>
       </div>
     </div>
 
-    <div class="inputs-container">
-      <div class="card-name-input-container">
-        <input type="text" id="card-name-input" placeholder="ほげほげ" />
-      </div>
-
-      <div class="card-attribute-input-container">
-        <select name="card-attribute" id="card-attribute-input" required>
-          <option value="鯖" selected>サーバーサイドエンジニア</option>
-          <option value="前">フロントエンドエンジニア</option>
-          <option value="網">ネットワークエンジニア</option>
-          <option value="基">インフラエンジニア</option>
-          <option value="全">フルスタックエンジニア</option>
-        </select>
-      </div>
-
-      <div class="card-level-input-container">
-        <select name="card-level" id="card-level-input" required>
-          <option value="1" selected>1年未満</option>
-          <option value="2">1年以上3年未満</option>
-          <option value="3">3年以上5年未満</option>
-          <option value="4">5年以上10年未満</option>
-          <option value="5">10年以上20年未満</option>
-          <option value="6">20年以上30年未満</option>
-          <option value="7">30年以上40年未満</option>
-          <option value="8">40年以上</option>
-        </select>
-      </div>
-
-      <div class="card-image-input-container">
-        <input
-          type="file"
-          name="card-image"
-          accept=".png, .jpg, .jpeg"
-          id="card-image-input"
-        />
-      </div>
-
-      <div class="card-category-input-container">
-        <select name="card-level" id="card-category-input" required>
-          <option value="JavaScript" selected>JavaScript</option>
-          <option value="C++">C++</option>
-          <option value="Python">Python</option>
-          <option value="Java">Java</option>
-          <option value="Go">Go</option>
-        </select>
-      </div>
-
-      <div class="card-text-input-container">
-        <input
-          type="text"
-          id="card-text-input"
-          placeholder="何を考えているのかさっぱりわからない新人のエンジニア。たまに怒ると怖い。"
-        />
-      </div>
-
-      <div class="account-type-input-container">
-        <select name="account-id" id="account-type-input" required>
-          <option value="GitHub" selected>GitHub</option>
-          <option value="Twitter">Twitter</option>
-        </select>
-      </div>
-
-      <div class="account-id-input-container">
-        <input type="text" id="account-id-input" placeholder="HogeHoge" />
-      </div>
-
-      <div class="download-btn-container">
-        <input id="download-btn" type="button" value="download image" />
-      </div>
-    </div>
     <script src="script.js"></script>
   </body>
 </html>

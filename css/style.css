@@ -1,1 +1,32 @@
 @import url("card.css");
+
+.header-container {
+  height: 40px;
+  background-color: #000;
+}
+
+.main-container {
+  display: flex;
+}
+
+.preview-container {
+  flex: 40%;
+  height: 600px;
+  background-color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs-container {
+  flex: 60%;
+  height: 600px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.item-name {
+  margin-top: 10px;
+}

@@ -19,6 +19,7 @@ const cardCategoryInput = document.getElementById("card-category-input");
 const cardTextInput = document.getElementById("card-text-input");
 const accountTypeInput = document.getElementById("account-type-input");
 const accountIdInput = document.getElementById("account-id-input");
+const downloadBtn = document.getElementById("download-btn");
 
 function getToday() {
   const dt = new Date();
@@ -107,11 +108,10 @@ accountIdInput.addEventListener("input", function () {
   accountId.innerText = this.value;
 });
 
-const btn = document.getElementById("download-btn");
-btn.addEventListener("click", async () => {
+downloadBtn.addEventListener("click", async () => {
   const canvas = await html2canvas(cardContainer);
   let downloadEle = document.createElement("a");
   downloadEle.href = canvas.toDataURL("image/png");
-  downloadEle.download = "canvas.png";
+  downloadEle.download = "nameCard.png";
   downloadEle.click();
 });
