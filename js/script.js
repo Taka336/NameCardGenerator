@@ -56,8 +56,8 @@ function getStatus() {
 
 function getCardNumber() {
   const dt = new Date();
-  const hour = dt.getHours();
-  const minute = dt.getMinutes();
+  const hour = ("00" + dt.getHours()).slice(-2);
+  const minute = ("00" + dt.getMinutes()).slice(-2);
   const dayNum = dt.getDay();
   const day = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"][dayNum];
   const cardNumber = `${day}-${hour}${minute}`;
