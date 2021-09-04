@@ -21,6 +21,7 @@ const cardTextInput = document.getElementById("card-text-input");
 const accountTypeInput = document.getElementById("account-type-input");
 const accountIdInput = document.getElementById("account-id-input");
 const downloadBtn = document.getElementById("download-btn");
+const tweetBtn = document.getElementById("tweet-btn");
 
 function getToday() {
   const dt = new Date();
@@ -94,7 +95,6 @@ cardImageInput.addEventListener("change", function () {
   reader.addEventListener(
     "load",
     function () {
-      // convert image file to base64 string
       cardImage.src = reader.result;
     },
     false
@@ -127,4 +127,21 @@ downloadBtn.addEventListener("click", async () => {
   downloadEle.href = canvas.toDataURL("image/png");
   downloadEle.download = "nameCard.png";
   downloadEle.click();
+});
+
+tweetBtn.addEventListener("click", function () {
+  const cardCategoryText =
+    document.getElementsByClassName("card-category")[0].innerText;
+  const arr = [
+    `${cardName.innerText} (${cardAttribute.innerText})属性\nレベル ${cardLevelInput.value}`,
+    `${cardCategoryText}\n${cardText.innerText}`,
+    `${cardStatus.innerText}\n\n`,
+  ];
+  const dataURL = encodeURI(location.href);
+  const dataText = encodeURI(arr.join("\n\n"));
+  const dataHashtags = "エンジニアの名刺";
+
+  window.open(
+    `https://twitter.com/share?text=${dataText}&url=${dataURL}&hashtags=${dataHashtags}`
+  );
 });
